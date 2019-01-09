@@ -1,17 +1,15 @@
-import React from 'react';
-import Carrousel from './Carrousel';
-import TimeUntil from './TimeUntil';
+import React from "react";
+import Carrousel from "./Carrousel";
+import TimeUntil from "./TimeUntil";
 
 const Featured = () => {
   return (
-    <div style={{position: 'relative'}}>
-      <Carrousel/>
+    <div style={{ position: "relative" }}>
+      <Carrousel />
       <div className="artist_name">
-        <div className="wrapper">
-          Ariana Grande
-        </div>
+        <div className="wrapper">Jay Chou</div>
       </div>
-      <TimeUntil/>
+      <TimeUntil />
     </div>
   );
 };

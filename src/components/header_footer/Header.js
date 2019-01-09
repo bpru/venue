@@ -1,30 +1,27 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import AppBar from '@material-ui/core/AppBar';
-import ToolBar from '@material-ui/core/Toolbar';
-import MenuIcon from '@material-ui/icons/Menu';
-import IconBtton from '@material-ui/core/IconButton';
+import AppBar from "@material-ui/core/AppBar";
+import ToolBar from "@material-ui/core/Toolbar";
+// import MenuIcon from "@material-ui/icons/Menu";
+import IconBtton from "@material-ui/core/IconButton";
+import MenuIcon from "@material-ui/icons/Menu";
 
-import SideDrawer from './SideDrawer';
-
+import SideDrawer from "./SideDrawer";
 
 export default class Header extends Component {
-
   state = {
     drawerOpen: false,
     headerShow: false
   };
 
   componentDidMount() {
-    window.addEventListener('scroll', this.scrollHandler)
+    window.addEventListener("scroll", this.scrollHandler);
   }
 
   // always remove the listener if the compoenent is unmounted
   componentWillUnmount() {
-    window.removeEventListener('scroll');
+    window.removeEventListener("scroll");
   }
-  
-
 
   scrollHandler = () => {
     // if the scroll position is greater than 0, show header
@@ -33,25 +30,24 @@ export default class Header extends Component {
         headerShow: true
       });
     } else {
-      this.setState({headerShow: false});
+      this.setState({ headerShow: false });
     }
-    
-  }
+  };
 
   toggleDrawer = value => {
     this.setState({
       drawerOpen: value
     });
-  }
+  };
 
   render() {
     return (
       <AppBar
         position="fixed"
         style={{
-          backgroundColor: this.state.headerShow? '#2f2f2f': 'transparent',
-          boxShadow: 'none',
-          padding: '10px 0'
+          backgroundColor: this.state.headerShow ? "#2f2f2f" : "transparent",
+          boxShadow: "none",
+          padding: "10px 0"
         }}
       >
         <ToolBar>
@@ -63,15 +59,15 @@ export default class Header extends Component {
             aria-label="Menu"
             color="inherit"
             onClick={() => this.toggleDrawer(true)}
-          >  
-            <MenuIcon></MenuIcon>
+          >
+            <MenuIcon />
           </IconBtton>
           <SideDrawer
             open={this.state.drawerOpen}
-            onClose={(value) => this.toggleDrawer(value)}
-            />
+            onClose={value => this.toggleDrawer(value)}
+          />
         </ToolBar>
-      </AppBar> 
-    )
+      </AppBar>
+    );
   }
 }

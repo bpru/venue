@@ -4,7 +4,7 @@ import Slide from 'react-reveal/Slide'
 export default class TimeUntil extends Component {
 
   state = {
-    deadline: 'Jan 1 2019',
+    deadline: 'Feb 10 2019 16:00',
     days: 0,
     hours: 0,
     minutes: 0,
@@ -35,6 +35,7 @@ export default class TimeUntil extends Component {
 
   render() {
     return (
+
       <Slide left delay={1000}>
         <div className="countdown_wrapper">
           <div className="countdown_top">

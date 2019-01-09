@@ -20,7 +20,7 @@ export default class VenueNfo extends Component {
                         style={{background: `url(${icon_calender})`}}>
                       </div>
                       <div className="vn_title">Event Date & Time</div>
-                      <div className="vn_desc">Jan 1st, 2019 @ 12:00 AM</div>
+                      <div className="vn_desc">Feb 20th, 2019 <br/>@ 4:00 PM</div>
                   </div>
                 </div>
               </div>  
@@ -35,7 +35,7 @@ export default class VenueNfo extends Component {
                         style={{background: `url(${icon_location})`}}>
                       </div>
                       <div className="vn_title">Event Location</div>
-                      <div className="vn_desc">Time Square, New York City</div>
+                    <div className="vn_desc">MGM Grand Garden Arena - Las Vegas</div>
                   </div>
                 </div>
               </div>
